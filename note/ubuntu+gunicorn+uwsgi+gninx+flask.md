@@ -1,0 +1,5 @@
+1. [ubuntu 部署Flask（阿里云)](https://zhuanlan.zhihu.com/p/28204251)
+2. [部署Flask(阿里云+gunicorn)](https://www.cnblogs.com/homeworknotes/p/11219902.html)
+3. [nginx+uwsgi, nginx+gunicorn区别和部署](https://www.jianshu.com/p/be2b587a900e)
+4. [uWSGI vs Gunicorn](https://zhuanlan.zhihu.com/p/50857407)
+5. [gunicorn flask](https://zhuanlan.zhihu.com/p/88422780)
