@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>mysql test</title>
+{% endblock %}
+
+
+{% block body %}
+
+<h1>mysql test</h1>
+    {% for each in persons %}
+        <h2>{{ each.id }}</h2>
+        {% if each.name %}
+            <h3>Name: {{ each.name }}</h3>
+        {% else %}
+            <h3>Name: N/A </h3>
+        {% endif %}
+    {% endfor %}
+
+
+    {% endblock %}

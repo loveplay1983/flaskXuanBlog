@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Posts</title>
+{% endblock %}
+
+
+{% block body %}
+
+<div class="all_posts">
+
+    <h1>All Posts</h1>
+
+    <h2>Create new blog posts</h2>
+    <!-- 
+        action means points to the url path, 
+        method is the action we want to be, 
+        either GET(get data from remote) or POST(push data to the remote)
+    -->
+
+    <form action="/posts" method="POST">
+        
+        <label for="post_title">Title: </label>
+            <input class="form-control" type="text" name="title" id="post_title" placeholder="Enter title" aria-label="Enter title">   
+        <label for="post_author">Author: </label>
+            <input class="form-control" type="text" name="auth" id="post_auth" placeholder="Enter author" aria-label="Enter author">   
+        <label for="post_contetnt">Posts:</label>
+        <textarea class="form-control" rows="3" name="content" id="post_contetnt" placeholder="Enter content" aria-label="Enter content"></textarea>
+        <br>
+        <input class="btn btn-outline-primary" type="submit" value="Post">
+    </form>
+
+    <hr>
+    <br>
+
+    {% if posts|length < 1 %}
+    <h4 style="text-align: center">There is no data, add new data below</h4>
+    {% else %}
+    {% for post in posts %}
+    <h2>{{ post.title }}</h2>
+    {% if post.author %}
+    <small>Written by: {{ post.author }} on {{ post.date_posted }}</small>
+    {% else %}
+    <small>Written by: Unknown on {{ post.date_posted }}</small>>
+    {% endif %}
+    <br>
+    <p>
+        <h3>{{ post.content }}</h3>
+    </p>
+    <a class="btn btn-danger" href="/posts/delete/{{ post.id }}">Delete</a>
+    &nbsp;&nbsp;
+    <a class="btn btn-primary" href="/posts/edit/{{ post.id }}">Edit</a>
+    <hr>
+    <br>
+
+
+    {% endfor %}
+    {% endif%}
+
+    <!--  Line to seperate the different parts -->
+    <!-- <hr> -->
+
+
+
+
+
+
+</div>
+
+
+
+
+
+{% endblock %}

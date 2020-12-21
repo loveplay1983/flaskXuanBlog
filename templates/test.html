@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="static/css/main.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+</head>
+<body>
+    <h1>Edit Post</h1>
+
+    <h2>Edit blog post here</h2>
+    <form action="/posts" method='POST'>
+        <label>Title:  </label><input type="text" name="title" id="post_title" class="input_title">
+    </br></br>
+        <label>Author:  </label><input type="text" name="auth" id="post_auth" class="input_auth">
+    </br></br>
+        <label>Posts:  </label><input type="text" name="content" id="post_data" class="input_data">
+    </br></br>
+        <input type="submit" value="Post Aagin">
+    </form>
+
+    <hr>
+</body>
+</html>

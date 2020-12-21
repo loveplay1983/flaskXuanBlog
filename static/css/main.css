@@ -1,0 +1,43 @@
+body {
+    font-family: Helvetica;
+}
+
+
+label {
+    width: 60px;
+    display: inline-block;
+}
+
+/* 
+body {
+    margin: 0;
+    font-family: sans-serif;
+    color: rgb(250, 0, 0);
+ } */
+
+ .edit {
+    max-width: 500px;
+    margin: auto;
+    background: white;
+    padding: 10px;
+    /* border: 1px solid blue; */
+    border-collapse: collapse;
+ }
+
+
+.input_title, .input_data, .input_auth {
+    width: 500px;
+    /* height: 100px;
+    text-align: top; */
+}
+
+/* 
+.container {
+    width: 500px;
+    clear: both;
+  }
+  
+.container input {
+width: 100%;
+clear: both;
+} */
